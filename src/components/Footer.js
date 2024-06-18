@@ -6,6 +6,10 @@ const FooterContainer = styled.footer`
   padding: 1rem;
   text-align: center;
   color: white;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Footer = () => (
