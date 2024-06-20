@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { FaHome, FaServicestack, FaInfoCircle, FaEnvelope, FaImage, FaBars } from 'react-icons/fa';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { FaHome, FaServicestack, FaInfoCircle, FaEnvelope, FaImage, FaBars } from "react-icons/fa";
 
 const Nav = styled.nav`
   background: ${({ theme }) => theme.colors.primary};
   padding: 1rem;
   display: flex;
-    justify-content: center; /* Align center for desktop screens */
+  justify-content: center; /* Align center for desktop screens */
   align-items: center;
 `;
 
@@ -24,7 +24,7 @@ const MenuIcon = styled(FaBars)`
 const NavLinks = styled.div`
   display: flex;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -68,21 +68,36 @@ const Header = () => {
   return (
     <Nav>
       <MenuIcon onClick={toggleMenu} />
-      <NavLinks isOpen={isOpen}>
+      <NavLinks $isOpen={isOpen}>
         <StyledNavLink to="/" onClick={toggleMenu}>
-          <IconWrapper><FaHome /></IconWrapper>Home
+          <IconWrapper>
+            <FaHome />
+          </IconWrapper>
+          Home
         </StyledNavLink>
         <StyledNavLink to="/services" onClick={toggleMenu}>
-          <IconWrapper><FaServicestack /></IconWrapper>Services
+          <IconWrapper>
+            <FaServicestack />
+          </IconWrapper>
+          Services
         </StyledNavLink>
         <StyledNavLink to="/samples" onClick={toggleMenu}>
-          <IconWrapper><FaImage /></IconWrapper>Samples
+          <IconWrapper>
+            <FaImage />
+          </IconWrapper>
+          Samples
         </StyledNavLink>
         <StyledNavLink to="/about" onClick={toggleMenu}>
-          <IconWrapper><FaInfoCircle /></IconWrapper>About
+          <IconWrapper>
+            <FaInfoCircle />
+          </IconWrapper>
+          About
         </StyledNavLink>
         <StyledNavLink to="/contact" onClick={toggleMenu}>
-          <IconWrapper><FaEnvelope /></IconWrapper>Contact
+          <IconWrapper>
+            <FaEnvelope />
+          </IconWrapper>
+          Contact
         </StyledNavLink>
       </NavLinks>
     </Nav>

@@ -14,7 +14,7 @@ const FooterContainer = styled.footer`
 
 const Footer = () => (
   <FooterContainer>
-    &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+    &copy; {new Date().getFullYear()} Ahmed Elzagh. All rights reserved.
   </FooterContainer>
 );
 

@@ -9,7 +9,8 @@ import calenderImage from "../assets/samples/nextcloud/nextcloud-groupware-calen
 import filesImage from "../assets/samples/nextcloud/nextcloud-hub7-files-preview.webp";
 import officeImage from "../assets/samples/nextcloud/nextcloud-hub8-office-preview.webp";
 import contactsImage from "../assets/samples/nextcloud/nextcloud-groupware-Contacts-zoomed.webp";
-import sampleVideo from "../assets/samples/nextcloud/Talk-Nextcloud-Hub-5.webm";
+import talkSampleVideo from "../assets/samples/nextcloud/Talk-Nextcloud-Hub-5.webm";
+import talkSampleImage from "../assets/samples/nextcloud/nextcloud-hub7-talk-preview.webp";
 import emailTemplatesImage from "../assets/samples/titan/email_templates.webp";
 import emailScheduleImage from "../assets/samples/titan/schedule_send.webp";
 import emailReadReceiptsImage from "../assets/samples/titan/read_receipts.webp";
@@ -202,8 +203,8 @@ const Samples = () => {
               <p>Nextcloud Files offers secure file storage and sharing solutions. Access your files from anywhere and collaborate seamlessly with your team.</p>
             </SampleItem>
             <SampleItem style={{ ...rightToLeft, gridColumn: "span 2" }}>
-              <SampleVideo controls>
-                <source src={sampleVideo} type="video/mp4" />
+              <SampleVideo poster={talkSampleImage} controls>
+                <source src={talkSampleVideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </SampleVideo>
               <p>Nextcloud Talk offers secure video conferencing and chat solutions. Enhance your team communication with real-time collaboration tools that are private and easy to use.</p>

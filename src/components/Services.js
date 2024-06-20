@@ -17,6 +17,9 @@ const ServicesContainer = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 1rem;
+  }
 `;
 
 const BlurOverlay = styled.div`
@@ -41,9 +44,12 @@ const Content = styled.div`
   margin: 2rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
     padding: 1.5rem;
+    margin: 1.5rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 1rem;
+    margin: 1rem;
+    width: 90%;
   }
 `;
 
@@ -52,6 +58,9 @@ const ServiceList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: 0.5rem;
+  }
 `;
 
 const ServiceItem = styled(animated.li)`
@@ -64,14 +73,19 @@ const ServiceItem = styled(animated.li)`
   transition: transform 0.3s;
   color: #333;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    flex: 1 1 calc(50% - 1rem);
-    margin: 1rem 0;
+    flex: 1 1 calc(100% - 2rem);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
   }
 `;
 
 const IconWrapper = styled.div`
   font-size: 2rem;
   margin-bottom: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const Services = () => {
