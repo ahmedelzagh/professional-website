@@ -15,7 +15,6 @@ import emailTemplatesImage from "../assets/samples/titan/email_templates.webp";
 import emailScheduleImage from "../assets/samples/titan/schedule_send.webp";
 import emailReadReceiptsImage from "../assets/samples/titan/read_receipts.webp";
 import emailFollowUpImage from "../assets/samples/titan/reminder.webp";
-import emailSignatureImage from "../assets/samples/titan/signature_builder.webp";
 
 const SamplesContainer = styled.div`
   position: relative;
@@ -143,46 +142,38 @@ const Samples = () => {
 
           <CategoryTitle>Email Services</CategoryTitle>
           <SampleList>
-            {/* <SampleItem style={{ ...leftToRight, gridColumn: "span 2" }}> */}
-            <SampleItem style={rightToLeft}>
-              <SampleImage src={emailTemplatesImage} alt="Email Templates Sample" />
-              <p>
-                Nextcloud Office integrates seamlessly with your existing tools, providing a powerful suite for document creation and editing. Enhance your productivity with our collaborative office
-                solutions.
-              </p>
-            </SampleItem>
-            <SampleItem style={rightToLeft}>
-              <SampleImage src={emailScheduleImage} alt="Schedule Send Sample" />
-              <p>
-                Nextcloud Office integrates seamlessly with your existing tools, providing a powerful suite for document creation and editing. Enhance your productivity with our collaborative office
-                solutions.
-              </p>
-            </SampleItem>
-            <SampleItem style={rightToLeft}>
-              <SampleImage src={emailReadReceiptsImage} alt="Read Receipts Sample" />
-              <p>
-                Nextcloud Office integrates seamlessly with your existing tools, providing a powerful suite for document creation and editing. Enhance your productivity with our collaborative office
-                solutions.
-              </p>
-            </SampleItem>
-            <SampleItem style={rightToLeft}>
-              <SampleImage src={emailFollowUpImage} alt="Follow-up Reminders Sample" />
-              <p>
-                Nextcloud Office integrates seamlessly with your existing tools, providing a powerful suite for document creation and editing. Enhance your productivity with our collaborative office
-                solutions.
-              </p>
-            </SampleItem>
             <SampleItem style={{ ...rightToLeft, gridColumn: "span 2" }}>
-              <SampleImage src={emailSignatureImage} alt="Signature Builder Sample" />
               <p>
                 Enhance your business communication with our Titan Email services. Enjoy features like Email Templates, Schedule Send, Read Receipts, Follow-up Reminders, and Signature Builder. Stay
                 organized and efficient with our reliable email solutions.
               </p>
             </SampleItem>
+            <SampleItem style={rightToLeft}>
+              <SampleImage src={emailTemplatesImage} alt="Email Templates Sample" />
+              <p>Save time by saving your frequently sent responses as templates and ensure that you always send a message that resonates with your customers.</p>
+            </SampleItem>
+            <SampleItem style={rightToLeft}>
+              <SampleImage src={emailScheduleImage} alt="Schedule Send Sample" />
+              <p>Whether you’ve identified the optimal send time for a customer or you need to draft a message during off-hours, schedule your emails to send when they’re most likely to be read.</p>
+            </SampleItem>
+            <SampleItem style={rightToLeft}>
+              <SampleImage src={emailReadReceiptsImage} alt="Read Receipts Sample" />
+              <p>Don't lose sleep wondering if your prospect read that crucial quote. With Read Receipts, get notified the moment your recipient opens your email.</p>
+            </SampleItem>
+            <SampleItem style={rightToLeft}>
+              <SampleImage src={emailFollowUpImage} alt="Follow-up Reminders Sample" />
+              <p>Don't settle for a non-reply to your important emails. Get nudges to circle back on the thread at the perfect time and keep your conversations going.</p>
+            </SampleItem>
           </SampleList>
 
           <CategoryTitle>Cooperation Solutions</CategoryTitle>
           <SampleList>
+            <SampleItem style={{...leftToRight, gridColumn: "span 2"}}>
+              <p>
+                Easy to use content collaboration platform accessible through mobile, desktop and web interfaces with Nextcloud. Teams can collaborate in real time on documents, chat and
+                engage in video calls, access their email or plan meetings in calendars.
+              </p>
+            </SampleItem>
             <SampleItem style={rightToLeft}>
               <SampleImage src={officeImage} alt="Nextcloud Office" />
               <p>
