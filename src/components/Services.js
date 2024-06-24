@@ -104,20 +104,6 @@ const Services = () => {
           <ServiceList>
             <ServiceItem style={fadeIn}>
               <IconWrapper>
-                <FaServer />
-              </IconWrapper>
-              <h3>Web Hosting</h3>
-              <p>Reliable and secure web hosting services for your business.</p>
-            </ServiceItem>
-            <ServiceItem style={fadeIn}>
-              <IconWrapper>
-                <FaCode />
-              </IconWrapper>
-              <h3>Website Development</h3>
-              <p>Professional website development to make your business stand out.</p>
-            </ServiceItem>
-            <ServiceItem style={fadeIn}>
-              <IconWrapper>
                 <FaEnvelope />
               </IconWrapper>
               <h3>Email Services</h3>
@@ -129,6 +115,20 @@ const Services = () => {
               </IconWrapper>
               <h3>Cooperation Solutions</h3>
               <p>Effective solutions to enhance business cooperation and communication.</p>
+            </ServiceItem>
+            <ServiceItem style={fadeIn}>
+              <IconWrapper>
+                <FaServer />
+              </IconWrapper>
+              <h3>Web Hosting</h3>
+              <p>Reliable and secure web hosting services for your business.</p>
+            </ServiceItem>
+            <ServiceItem style={fadeIn}>
+              <IconWrapper>
+                <FaCode />
+              </IconWrapper>
+              <h3>Website Development</h3>
+              <p>Professional website development to make your business stand out.</p>
             </ServiceItem>
           </ServiceList>
         </Content>

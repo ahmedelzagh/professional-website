@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AnimationWrapper from "./AnimationWrapper";
 import { useSpring, animated } from "react-spring";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import samplesBG from "../assets/backgrounds/samplesBG.webp";
 import hostingImage from "../assets/samples/hostingImage.jpg";
 import webDevImage from "../assets/samples/webDevImage.jpg";
@@ -98,6 +99,22 @@ const SampleVideo = styled.video`
   border-radius: 10px;
 `;
 
+const StyledLink = styled.a`
+  color: #00aaff;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+
+  svg {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    color: #0077cc;
+    text-decoration: underline;
+  }
+`;
+
 const Samples = () => {
   const leftToRight = useSpring({
     from: { opacity: 0, transform: "translateX(-20px)" },
@@ -116,36 +133,18 @@ const Samples = () => {
       <SamplesContainer>
         <BlurOverlay />
         <Content>
-          <h1>Our Work Samples</h1>
+          <h1>Our Services Samples</h1>
 
-          <CategoryTitle>Hosting Services</CategoryTitle>
-          <SampleList>
-            <SampleItem style={{ ...leftToRight, gridColumn: "span 2" }}>
-              <SampleImage src={hostingImage} alt="Hosting Sample" />
-              <p>
-                Our hosting services provide a reliable and secure platform for your business websites and applications. Enjoy high uptime, fast loading speeds, and robust security features to ensure
-                your online presence is always available and protected.
-              </p>
-            </SampleItem>
-          </SampleList>
-
-          <CategoryTitle>Web Development</CategoryTitle>
-          <SampleList>
-            <SampleItem style={{ ...rightToLeft, gridColumn: "span 2" }}>
-              <SampleImage src={webDevImage} alt="Web Development Sample" />
-              <p>
-                Our professional web development services are designed to create stunning and functional websites that represent your brand and engage your audience. From custom designs to scalable
-                solutions, we deliver websites that drive results.
-              </p>
-            </SampleItem>
-          </SampleList>
-
-          <CategoryTitle>Email Services</CategoryTitle>
+          <CategoryTitle>Email Service</CategoryTitle>
           <SampleList>
             <SampleItem style={{ ...rightToLeft, gridColumn: "span 2" }}>
               <p>
                 Enhance your business communication with our Titan Email services. Enjoy features like Email Templates, Schedule Send, Read Receipts, Follow-up Reminders, and Signature Builder. Stay
                 organized and efficient with our reliable email solutions.
+                <StyledLink href="https://titan.email/professional-email-features/" target="_blank" rel="noopener noreferrer">
+                  See all features
+                  <FaExternalLinkAlt />
+                </StyledLink>
               </p>
             </SampleItem>
             <SampleItem style={rightToLeft}>
@@ -166,12 +165,16 @@ const Samples = () => {
             </SampleItem>
           </SampleList>
 
-          <CategoryTitle>Cooperation Solutions</CategoryTitle>
+          <CategoryTitle>Cooperation Solution</CategoryTitle>
           <SampleList>
-            <SampleItem style={{...leftToRight, gridColumn: "span 2"}}>
+            <SampleItem style={{ ...leftToRight, gridColumn: "span 2" }}>
               <p>
-                Easy to use content collaboration platform accessible through mobile, desktop and web interfaces with Nextcloud. Teams can collaborate in real time on documents, chat and
-                engage in video calls, access their email or plan meetings in calendars.
+                Easy to use content collaboration platform accessible through mobile, desktop and web interfaces with Nextcloud. Teams can collaborate in real time on documents, chat and engage in
+                video calls, access their email or plan meetings in calendars.
+                <StyledLink href="https://try.nextcloud.com/" target="_blank" rel="noopener noreferrer">
+                  Try Nextcloud
+                  <FaExternalLinkAlt />
+                </StyledLink>
               </p>
             </SampleItem>
             <SampleItem style={rightToLeft}>
@@ -199,6 +202,27 @@ const Samples = () => {
                 Your browser does not support the video tag.
               </SampleVideo>
               <p>Nextcloud Talk offers secure video conferencing and chat solutions. Enhance your team communication with real-time collaboration tools that are private and easy to use.</p>
+            </SampleItem>
+          </SampleList>
+          <CategoryTitle>Hosting Service</CategoryTitle>
+          <SampleList>
+            <SampleItem style={{ ...leftToRight, gridColumn: "span 2" }}>
+              <SampleImage src={hostingImage} alt="Hosting Sample" />
+              <p>
+                Our hosting services provide a reliable and secure platform for your business websites and applications. Enjoy high uptime, fast loading speeds, and robust security features to ensure
+                your online presence is always available and protected.
+              </p>
+            </SampleItem>
+          </SampleList>
+
+          <CategoryTitle>Web Development</CategoryTitle>
+          <SampleList>
+            <SampleItem style={{ ...rightToLeft, gridColumn: "span 2" }}>
+              <SampleImage src={webDevImage} alt="Web Development Sample" />
+              <p>
+                Our professional web development services are designed to create stunning and functional websites that represent your brand and engage your audience. From custom designs to scalable
+                solutions, we deliver websites that drive results.
+              </p>
             </SampleItem>
           </SampleList>
         </Content>
